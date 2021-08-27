@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дизайн карточки товаров</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card-item">
+      <div class="img-box">
+        <img id="cardImg_1" src="img/shirt_black.png" alt="Футболка черная">
+      </div>
+      <div class="content">
+        <form action="mail-telegram.php" class="cardTShirt" method="POST">
+          <input type="hidden" name="product" value="tShirt_1">
+          <input type="hidden" name="brand" value="Nike">
+          <input type="hidden" name="type" value="Майка Мужская">
+          <div class="row">
+            <div class="info-col">
+              <h4>Nike</h4>
+              <p>Мужская Майка</p>
+              <h5>Размеры:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xs" checked>
+                  <span class="size">xs</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="s">
+                  <span class="size">s</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="m">
+                  <span class="size">m</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xl">
+                  <span class="size">xl</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xxl">
+                  <span class="size">xxl</span>
+                </label>
+              </div>
+              <h5>Цвет:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_1" checked>
+                  <div class="color" onclick=" changeImageSrc_1('img/shirt_black.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_2">
+                  <div class="color" onclick=" changeImageSrc_1('img/shirt_blue.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_3">
+                  <div class="color" onclick=" changeImageSrc_1('img/shirt_green.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_4">
+                  <div class="color" onclick=" changeImageSrc_1('img/shirt_red.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_5">
+                  <div class="color" onclick=" changeImageSrc_1('img/shirt_rose.png'); "></div>
+                </label>
+              </div>
+            </div>
+            <div class="price-col">
+              <h3 id="priceBox" class="catalog__price"><span class="price">699</span> р.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <button id="button-key" type="submit">Купить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card-item">
+      <div class="img-box">
+        <img id="cardImg_2" src="img/shirt_blue.png" alt="Футболка черная">
+      </div>
+      <div class="content">
+        <form action="./mail-telegram.php" class="cardTShirt" method="POST">
+          <input type="hidden" name="product" value="tShirt_2">
+          <input type="hidden" name="brand" value="Versace">
+          <input type="hidden" name="type" value="Майка Мужская">
+          <div class="row">
+            <div class="info-col">
+              <h4>Versace</h4>
+              <p>Мужская Майка</p>
+              <h5>Размеры:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xs" checked>
+                  <span class="size">xs</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="s">
+                  <span class="size">s</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="m">
+                  <span class="size">m</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xl">
+                  <span class="size">xl</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xxl">
+                  <span class="size">xxl</span>
+                </label>
+              </div>
+              <h5>Цвет:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_1" >
+                  <div class="color" onclick=" changeImageSrc_2('img/shirt_black.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_2" checked>
+                  <div class="color" onclick=" changeImageSrc_2('img/shirt_blue.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_3">
+                  <div class="color" onclick=" changeImageSrc_2('img/shirt_green.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_4">
+                  <div class="color" onclick=" changeImageSrc_2('img/shirt_red.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_5">
+                  <div class="color" onclick=" changeImageSrc_2('img/shirt_rose.png'); "></div>
+                </label>
+              </div>
+            </div>
+            <div class="price-col">
+              <h3 id="priceBox" class="catalog__price"><span class="price">699</span> р.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <button id="button-key" type="submit">Купить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card-item">
+      <div class="img-box">
+        <img id="cardImg_3" src="img/shirt_green.png" alt="Футболка черная">
+      </div>
+      <div class="content">
+        <form action="./mail-telegram.php" class="cardTShirt" method="POST">
+          <input type="hidden" name="product" value="tShirt_3">
+          <input type="hidden" name="brand" value="Lauren">
+          <input type="hidden" name="type" value="Майка Мужская">
+          <div class="row">
+            <div class="info-col">
+              <h4>Lauren</h4>
+              <p>Мужская Майка</p>
+              <h5>Размеры:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xs" checked>
+                  <span class="size">xs</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="s">
+                  <span class="size">s</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="m">
+                  <span class="size">m</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xl">
+                  <span class="size">xl</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xxl">
+                  <span class="size">xxl</span>
+                </label>
+              </div>
+              <h5>Цвет:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_1" checked>
+                  <div class="color" onclick=" changeImageSrc_3('img/shirt_black.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_2">
+                  <div class="color" onclick=" changeImageSrc_3('img/shirt_blue.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_3">
+                  <div class="color" onclick=" changeImageSrc_3('img/shirt_green.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_4">
+                  <div class="color" onclick=" changeImageSrc_3('img/shirt_red.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_5">
+                  <div class="color" onclick=" changeImageSrc_3('img/shirt_rose.png'); "></div>
+                </label>
+              </div>
+            </div>
+            <div class="price-col">
+              <h3 id="priceBox" class="catalog__price"><span class="price">699</span> р.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <button id="button-key" type="submit">Купить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card-item">
+      <div class="img-box">
+        <img id="cardImg_4" src="img/shirt_red.png" alt="Футболка черная">
+      </div>
+      <div class="content">
+        <form action="./mail-telegram.php" class="cardTShirt" method="POST">
+          <input type="hidden" name="product" value="tShirt_4">
+          <input type="hidden" name="brand" value="Chanel">
+          <input type="hidden" name="type" value="Майка Мужская">
+          <div class="row">
+            <div class="info-col">
+              <h4>Chanel</h4>
+              <p>Мужская Майка</p>
+              <h5>Размеры:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xs" checked>
+                  <span class="size">xs</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="s">
+                  <span class="size">s</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="m">
+                  <span class="size">m</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xl">
+                  <span class="size">xl</span>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="sizes" value="xxl">
+                  <span class="size">xxl</span>
+                </label>
+              </div>
+              <h5>Цвет:</h5>
+              <div class="input-container">
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_1" checked>
+                  <div class="color" onclick=" changeImageSrc_4('img/shirt_black.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_2">
+                  <div class="color" onclick=" changeImageSrc_4('img/shirt_blue.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_3">
+                  <div class="color" onclick=" changeImageSrc_4('img/shirt_green.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_4">
+                  <div class="color" onclick=" changeImageSrc_4('img/shirt_red.png'); "></div>
+                </label>
+                <label class="input-box">
+                  <input type="radio" name="colors" value="color_5">
+                  <div class="color" onclick=" changeImageSrc_4('img/shirt_rose.png'); "></div>
+                </label>
+              </div>
+            </div>
+            <div class="price-col">
+              <h3 id="priceBox" class="catalog__price"><span class="price">699</span> р.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <button id="button-key" type="submit">Купить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

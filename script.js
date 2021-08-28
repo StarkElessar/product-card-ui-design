@@ -153,22 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
   // Калькулятор смены цены при изменении кнопки radio:
-
-  // let forms = document.querySelectorAll('.cardTShirt');
-  // for (let i = 0; i < forms.length; ++i) {
-  // forms[i].addEventListener('change', function () {
-
-  $(".cardTShirt").change(funCalc = () => {
+  const formCalculate = $(".cardTShirt");
+  formCalculate.change(function () {
     let brandName = $("input[name='product']", this).val(),
-      size = $("input[name='sizes']:checked", this).val(),
-      color = $("input[name='colors']:checked", this).val(),
-      calculationPrice = 0;
+        size = $("input[name='sizes']:checked", this).val(),
+        color = $("input[name='colors']:checked", this).val(),
+        calculationPrice = 0;
 
     calculationPrice += calculator.product[brandName][size][color];
 
     let calculatorPriceNew = $(".price", this);
-
-    brandName = 0 < calculatorPriceNew.data("animateFrom") ? calculatorPriceNew.data("animateFrom") : 0;
 
     $({ animateNumber: brandName }).animate({ animateNumber: calculationPrice }, {
       duration: 800, step: function (brandName) {
@@ -176,17 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   });
-  $(".cardTShirt").change();
-
+  formCalculate.change();
 
 });
-  
 
-
-
-
-const imgBox = document.querySelector('#cardImg');
+const imgBox = document.querySelector('.cardImg');
   function changeImageSrc(anything) {
     imgBox.src = anything;
 };
-  

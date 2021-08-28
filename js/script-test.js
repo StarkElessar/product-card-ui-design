@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   //Обьект товар - цена:
   const calculator = {
     "product": {
@@ -153,39 +154,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
   // Калькулятор смены цены при изменении кнопки radio:
-  const onChangeFormCalculate = $(".cardTShirt");
-  onChangeFormCalculate.change(function () {
-    let brandName = $("input[name='product']", this).val(),
-      size = $("input[name='sizes']:checked", this).val(),
-      color = $("input[name='colors']:checked", this).val(),
-      calculationPrice = 0;
-
-    calculationPrice += calculator.product[brandName][size][color];
-
-    let calculatorPriceNew = $(".price", this);
-
-    $({ animateNumber: brandName }).animate({ animateNumber: calculationPrice }, {
-      duration: 800, step: function (brandName) {
-        calculatorPriceNew.text(Number(brandName).toFixed());
-      }
-    })
-  });
-  onChangeFormCalculate.change();
-
-  //Выбор цвета одежды и изменение img:
-  const brands = [...document.querySelectorAll('.card-item')].map((el) => el.dataset['brand']);
-
-  brands.forEach((brand) => {
-    const card = document.querySelector(`[data-brand=${brand}]`);
-    const cardImg = card.querySelector('.cardImg');
-    const colorButtons = card.querySelectorAll('.color');
-
-    colorButtons.forEach((colorButton) => {
-      const color = colorButton.dataset['color'];
-
-      colorButton.onclick = (() => cardImg.src = `img/shirt_${color}.png`);
+  const forms = document.querySelectorAll('.cardTShirt');
+  for (let i = 0; i < forms.length; ++i) {
+    forms[i].addEventListener('change', function () {
       
-      
+      let brandName = $("input[name='product']", this).val(),
+        size = $("input[name='sizes']:checked", this).val(),
+        color = $("input[name='colors']:checked", this).val(),
+        calculationPrice = 0;
+
+      calculationPrice += calculator.product[brandName][size][color];
+
+      let calculatorPriceNew = $(".price", this);
+
+      $({ animateNumber: brandName }).animate({ animateNumber: calculationPrice }, {
+        duration: 800, step: function (brandName) {
+          calculatorPriceNew.text(Number(brandName).toFixed());
+        }
+      })
     })
-  })
+  }
+
+
+
 });
+
+
+
+const imgBox = document.querySelector('#cardImg');
+  function changeImageSrc(anything) {
+    imgBox.src = anything;
+};
+  
+
+
+
+
+const _brandName = document.getElementsByName('product').value;
+
+console.log('_brandName');
+

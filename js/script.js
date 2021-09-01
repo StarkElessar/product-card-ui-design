@@ -188,4 +188,23 @@ document.addEventListener('DOMContentLoaded', () => {
       
     })
   })
+
+  const changeColorImg = document.querySelectorAll('.color');
+  changeColorImg.forEach((btn) => {
+    const inputColors = document.querySelectorAll('input[name="colors"]');
+    
+    inputColors.forEach((input) => {
+      input.addEventListener('click', () => {
+        if (input.checked !== true) {
+          btn.classList.remove('active');
+        } else {
+          btn.classList.add('active');
+        }
+      })
+    })
+  })
+
+  console.log(inputColors);
+  
+
 });

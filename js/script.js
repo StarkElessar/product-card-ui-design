@@ -178,33 +178,18 @@ document.addEventListener('DOMContentLoaded', () => {
   brands.forEach((brand) => {
     const card = document.querySelector(`[data-brand=${brand}]`);
     const cardImg = card.querySelector('.cardImg');
-    const colorButtons = card.querySelectorAll('.color');
+    const changeColorInputLabels = card.querySelectorAll('.color');
 
-    colorButtons.forEach((colorButton) => {
-      const color = colorButton.dataset['color'];
-
-      colorButton.onclick = (() => cardImg.src = `img/shirt_${color}.png`);
-      
-      
+    changeColorInputLabels.forEach((label) => {
+      const color = label.dataset['color'];
+        
+      label.onclick = () => {
+        cardImg.src = `img/shirt_${color}.png`;
+        changeColorInputLabels.forEach((l) => l.classList.remove('active'));
+        label.classList.add('active');
+      };
     })
   })
-
-  const changeColorImg = document.querySelectorAll('.color');
-  changeColorImg.forEach((btn) => {
-    const inputColors = document.querySelectorAll('input[name="colors"]');
-    
-    inputColors.forEach((input) => {
-      input.addEventListener('click', () => {
-        if (input.checked !== true) {
-          btn.classList.remove('active');
-        } else {
-          btn.classList.add('active');
-        }
-      })
-    })
-  })
-
-  console.log(inputColors);
   
 
 });
